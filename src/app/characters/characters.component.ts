@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Character } from '../character';
+import { CHARACTER } from '../mock-character';
+
 
 @Component({
   selector: 'app-characters',
@@ -8,10 +10,7 @@ import { Character } from '../character';
 })
 export class CharactersComponent implements OnInit {
   
-  character: Character = {
-    id: 1,
-    name: 'Darth Vader'
-  };
+  characters = CHARACTER
 
   constructor() { }
 

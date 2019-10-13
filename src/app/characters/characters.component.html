@@ -1,3 +1,6 @@
-<h2>{{character.name | uppercase}} Details</h2>
-<div><span>id: </span>{{character.id}}</div>
-<div><span>name: </span>{{character.name}}</div>
+<h2>Start Wars Character</h2>
+<ul class="Characters">
+  <li *ngFor="let character of characters">
+    <span class="badge">{{character.id}}</span> {{character.name}}
+  </li>
+</ul>
