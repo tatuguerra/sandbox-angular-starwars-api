@@ -8,7 +8,7 @@ import {log} from 'util'
   styleUrls: ['./character-detail.component.scss']
 })
 export class CharacterDetailComponent implements OnInit {
-  @Input() character: Character;
+  @Input() character: Character[];
   
 
   constructor() { }

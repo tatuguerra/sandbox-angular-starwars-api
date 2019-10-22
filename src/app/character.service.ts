@@ -2,12 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, catchError, tap } from 'rxjs/operators';
+import { Character } from './character';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CharacterService {
-  endpoint = 'https://swapi.co/api/people';
+  endpoint = 'https://swapi.co/api/';
+  
+  
 
   constructor(private http: HttpClient) { }
 
@@ -21,10 +24,11 @@ export class CharacterService {
     return body || { };
   }
   getCharacters(): Observable<any> {
-    return this.http.get(this.endpoint)
+    return this.http.get<Character[]>(this.endpoint+ 'people/')
+    
   }
-  getCharacter(id): Observable<any> {
-    return this.http.get(this.endpoint + 'Character/' + id).pipe(
+  getCharacter(): Observable<any> {
+    return this.http.get(this.endpoint + 'people/').pipe(
       map(this.extractData));
   }
 }

@@ -1,7 +1,7 @@
 <h2>Character List</h2>
 <ul class="Characters">
-  <li *ngFor="let character of characters" (click)="onSelect(character)">
-    <span class="badge">{{character.id}}</span> {{character.name}}
+  <li *ngFor="let character of characters$" (click)="onSelect(character)">
+    <span class="badge"></span> {{character.name}}
   </li>
 </ul>
 <app-character-detail [character]="selectedCharacter"></app-character-detail>
