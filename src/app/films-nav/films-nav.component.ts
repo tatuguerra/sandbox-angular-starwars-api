@@ -22,7 +22,6 @@ export class FilmsNavComponent implements OnInit {
 
   onSelect(film: Film): void{
     this.selectedFilm = film;
-    console.log(this.selectedFilm);
     
   }
 

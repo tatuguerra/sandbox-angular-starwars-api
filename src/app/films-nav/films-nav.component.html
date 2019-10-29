@@ -4,3 +4,5 @@
     <li class="film-nav__item" *ngFor="let film of films$" (click)="onSelect(film)"><span>{{film.title}}</span></li>
   </ul>
 </nav>
+
+<app-film-detail [film]="selectedFilm"></app-film-detail>

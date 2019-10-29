@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { Observable, of } from 'rxjs';
 import { map, catchError, tap } from 'rxjs/operators';
 import { Film  } from './film.model';
+import { MessageService } from './message.service';
 
 @Injectable({
   providedIn: 'root'
@@ -27,8 +28,7 @@ export class FilmService {
     return this.http.get<Film[]>(this.endpoint+ 'films/')
     
   }
-  getFilm(id): Observable<any> {
-    return this.http.get(this.endpoint + 'films/' + id).pipe(
-      map(this.extractData));
+  getFilm(id: number): Observable<any> {
+    return this.http.get(this.endpoint + 'films/' + id);
   }
 }

@@ -1,0 +1,10 @@
+<div *ngIf="film">
+    <h2>{{film.title | uppercase}}</h2>
+    <div><span>director: </span>{{film.director}}</div>
+    <div><span>release date: </span>{{film.release_date}}</div>
+    <div><span>characters: </span>{{film.characters.length}}</div>
+    <div><span>planets: </span>{{film.planets.length}}</div>
+    <div><span>starships: </span>{{film.starships.length}}</div>
+    <div><span>vehicles: </span>{{film.vehicles.length}}</div>
+    <div><span>species: </span>{{film.species.length}}</div>
+  </div>
