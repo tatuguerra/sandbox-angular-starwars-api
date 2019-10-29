@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { CharactersComponent } from './characters/characters.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
 import { CharacterService } from './character.service';
+import { FilmsNavComponent } from './films-nav/films-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
-    CharacterDetailComponent
+    CharacterDetailComponent,
+    FilmsNavComponent
   ],
   imports: [
     BrowserModule,
